@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
-import { VERSION } from "./constants/version.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import * as briefcase from "./operations/briefcase.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { VERSION } from "./constants/version.js";
 
 if (!globalThis.fetch) {
   globalThis.fetch = fetch as unknown as typeof global.fetch;
@@ -60,19 +60,18 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         throw new Error("Không tìm thấy công cụ");
     }
   } catch (error) {
-    console.error('server.setRequestHandler()', error);
+    console.error("server.setRequestHandler()", error);
     throw new Error("Lỗi khi gọi công cụ");
   }
 });
 
-
 async function runServer() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("🚀 DichVuCong MCP Server is running...")
+  console.error("🚀 DichVuCong MCP Server is running...");
 }
 
 runServer().catch((error) => {
-  console.error('main()', error);
-  process.exit(1)
-})
+  console.error("main()", error);
+  process.exit(1);
+});
