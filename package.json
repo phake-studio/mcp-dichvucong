@@ -1,0 +1,36 @@
+{
+  "name": "@phakestudio/mcp-dichvucong",
+  "version": "0.0.1",
+  "description": "Dịch vụ công MCP",
+  "license": "MIT",
+  "author": "Phake Studio (https://github.com/phake-studio)",
+  "homepage": "https://github.com/phake-studio/mcp-dichvucong",
+  "bin": {
+    "mcp-dichvucong": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "prepare": "npm run build",
+    "build": "tsc && shx chmod +x dist/*.js"
+  },
+  "keywords": [],
+  "packageManager": "pnpm@10.9.0",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/node-fetch": "^2.6.12",
+    "node-fetch": "^3.3.2",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3",
+    "universal-user-agent": "^7.0.2",
+    "zod": "^3.24.3",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2"
+  }
+}
