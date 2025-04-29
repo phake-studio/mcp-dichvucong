@@ -11,22 +11,9 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.10.2
         version: 1.10.2
-    devDependencies:
-      '@types/node':
-        specifier: ^22.15.3
-        version: 22.15.3
-      '@types/node-fetch':
-        specifier: ^2.6.12
-        version: 2.6.12
       node-fetch:
         specifier: ^3.3.2
         version: 3.3.2
-      shx:
-        specifier: ^0.4.0
-        version: 0.4.0
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
       universal-user-agent:
         specifier: ^7.0.2
         version: 7.0.2
@@ -36,6 +23,19 @@ importers:
       zod-to-json-schema:
         specifier: ^3.24.5
         version: 3.24.5(zod@3.24.3)
+    devDependencies:
+      '@types/node':
+        specifier: ^22.15.3
+        version: 22.15.3
+      '@types/node-fetch':
+        specifier: ^2.6.12
+        version: 2.6.12
+      shx:
+        specifier: ^0.4.0
+        version: 0.4.0
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
 
